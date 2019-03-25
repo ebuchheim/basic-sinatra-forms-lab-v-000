@@ -5,6 +5,14 @@
   <title>Basketball Team Signup</title>
  </head>
  <body>
+ <h1>Create a Basketball Team!</h1>
+    <form action="/team" method="POST">
+        <% @fields.each do |name, label| %>
+            <p><label for='<%= name.to_s %>'><%= "#{label}: " %></label>
+            <input type="text" name='<%= name.to_s %>'></p>
+        <% end %>
+        <input type="submit" value="Submit">
+    </form>
  </body>
 </html>
 
